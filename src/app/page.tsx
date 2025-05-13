@@ -14,6 +14,7 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl py-2">
             Som interiérový dizajnér a toto je výber mojej práce.
           </p>
+          <p className="text-2xl">Eduard Herák</p>
         </div>
 
         {/* Text o tebe v spodnej časti obrázka */}
