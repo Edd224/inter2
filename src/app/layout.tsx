@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 
 export const metadata: Metadata = {
-  title: 'Moje portfólio – Interiérový dizajnér',
+  title: 'Intere – Interiérový dizajnér',
   description: 'Tvorím krásne a funkčné interiéry.',
 icons: {
     icon: '/logo intere.svg',
