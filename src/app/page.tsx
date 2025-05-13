@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,12 @@ export default function HomePage() {
           </p>
           <p className="text-2xl">Eduard Herák</p>
         </div>
+        <div className="absolute top-1 sm:top-6 left-1/2">
+          <Link href="/">
+            <Image src="/logo intere.svg" alt="Logo" className='w-2xl' width={40} height={40} />
+          </Link>
+        </div>
+
 
         {/* Text o tebe v spodnej časti obrázka */}
         <div className="absolute rounded-r-full bottom-0 left-0 w-full bg-black/60 px-6 py-8">
