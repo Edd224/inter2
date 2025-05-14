@@ -29,71 +29,70 @@ const images = [
   '/gallery/22.jpg',
   '/gallery/23.jpg',
   '/gallery/24.jpg',
-
-
-
 ];
 
 export default function GaleriaPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const handleClose = () => setSelectedIndex(null);
+  const goNext = () =>
+    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % images.length : null));
+  const goPrev = () =>
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev - 1 + images.length) % images.length : null
+    );
 
   return (
     <div className="p-4">
-      <div className="flex flex-col items-center justify-center gap-6 mb-10">
-        <h1 className="text-4xl font-bold text-center">Galéria</h1>
-
-        <div className="flex flex-col sm:flex-row items-center gap-6">
-          <div className="flex flex-col items-center">
-            <Image
-              src="/sketchup.png"
-              alt="SketchUp logo"
-              className="bg-white p-3 rounded shadow w-[180px] h-[60px] object-contain"
-              width={180}
-              height={60}
-              unoptimized
-            />
-            <span className="mt-2 text-sm text-white">SketchUp</span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <Image
-              src="/twinmotion.png"
-              alt="Twinmotion logo"
-              className="bg-white p-3 rounded shadow w-[180px] h-[60px] object-contain"
-              width={180}
-              height={60}
-              unoptimized
-            />
-            <span className="mt-2 text-sm text-white">Twinmotion</span>
-          </div>
-        </div>
-      </div>
+      <h1 className="text-4xl mb-10 font-bold text-center">Galéria</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {images.map((src, index) => (
           <div
             key={index}
-            className="cursor-pointer overflow-hidden rounded shadow"
-            onClick={() => setSelectedImage(src)}
+            className="relative cursor-pointer overflow-hidden rounded shadow group"
+            onClick={() => setSelectedIndex(index)}
           >
             <Image
               src={src}
               alt={`Obrázok ${index + 1}`}
               width={400}
               height={300}
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-200"
+              quality={85}
+              className="w-full h-auto object-cover transition-transform duration-200 group-hover:scale-105"
             />
+
+            {/* Dve logá zobrazované pri hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/70">
+              <div className="flex gap-6 bg-white/60 p-4 rounded-l-full">
+                <Image
+                  src="/sketchup.png"
+                  alt="SketchUp Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+                <Image
+                  src="/twinmotion.png"
+                  alt="Twinmotion Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
-      {selectedImage && (
-        <Modal onClose={() => setSelectedImage(null)}>
+      {selectedIndex !== null && (
+        <Modal onClose={handleClose} onNext={goNext} onPrev={goPrev}>
           <Image
-            src={selectedImage}
-            alt="Zväčšený obrázok"
-            width={1200}
-            height={800}
-            className="w-full h-auto max-h-[90vh] object-contain rounded"
+            src={images[selectedIndex]}
+            alt={`Obrázok ${selectedIndex + 1}`}
+            width={1600}
+            height={900}
+            quality={90}
+            className="max-w-full max-h-[90vh] object-contain rounded"
           />
         </Modal>
       )}

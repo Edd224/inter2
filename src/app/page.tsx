@@ -9,17 +9,21 @@ export default function HomePage() {
         className="relative w-full min-h-screen bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/hero.jpg')" }}
       >
+
+        {/* Overlay pre stmavenie pozadia */}
+        <div className="absolute inset-0 bg-black/10 z-0" />
+        
         {/* Horný uvítací text */}
-        <div className="absolute top-16 left-1/2 sm:left-8 transform -translate-x-1/2 sm:translate-x-0 bg-black/60 p-6 rounded-l-full w-full sm:max-w-xl text-center sm:text-right">
+        <div className="absolute top-20 left-1/2 sm:left-8 transform -translate-x-1/2 sm:translate-x-0 bg-black/60 p-6 rounded-l-full w-full sm:max-w-xl text-center sm:text-right">
           <h1 className="text-4xl sm:text-7xl font-bold mb-4">Vitajte v mojom portfóliu</h1>
           <p className="text-lg sm:text-xl py-2">
             Som interiérový dizajnér a toto je výber mojej práce.
           </p>
           <p className="text-2xl">Eduard Herák</p>
         </div>
-        <div className="absolute top-1 sm:top-6 left-1/2">
+        <div className="absolute top-0 left-1/2">
           <Link href="/">
-            <Image src="/logo intere.svg" alt="Logo" className='w-2xl' width={40} height={40} />
+            <Image src="/logo intere.svg" alt="Logo" className='w-xl' width={40} height={40} />
           </Link>
         </div>
 
@@ -35,7 +39,7 @@ export default function HomePage() {
       </section>
 
       {/* Prípadný ďalší obsah */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto py-12">
         <h2 className="text-3xl font-semibold mb-4">Moje projekty</h2>
         <Link
           href="/galeria"

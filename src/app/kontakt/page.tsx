@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Contact() {
   return (
-    <section className="container flex mx-auto px-4 py-12" id="kontakt">
+    <section className="container flex mx-auto px-4 sm:px-20 py-12" id="kontakt">
       <div className="w-1/2">
         <h2 className="text-3xl font-bold mb-6">Kontaktujte ma</h2>
 
@@ -45,9 +45,9 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="w-full sm:w-1/2">
+      <div className="w-full bg-white ml-6 sm:ml-0 rounded-l-0 rounded-t-full sm:rounded-t-sm p-2 sm:p-8 sm:w-1/2 flex justify-center items-center">
         <Link href="/">
-          <Image src="/logo intere.svg" alt="Logo" className="w-xl sm:w-6xl" width={100} height={100} />
+          <Image src="/logo intere.svg" alt="Logo" className="w-xl sm:w-6xl rotate-90 sm:rotate-0" width={100} height={100} />
         </Link>
       </div>
 

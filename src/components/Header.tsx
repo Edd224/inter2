@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#f3f3f2] shadow">
+    <header className="bg-[#f3f3f2] rounded-r-full mx-4 shadow">
       <nav className="container mx-auto p-4 flex items-center justify-center">
         {/* Logo vľavo */}
 

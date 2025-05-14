@@ -9,7 +9,7 @@ export default function About() {
       <div className="mb-6">
         <p className="text-lg leading-relaxed">
           Som kreatívec s umeleckým aj technickým myslením. Pracujem precízne a s vášňou pre každý projekt –
-          či už ide o dizajn interiérov, programovanie alebo grafiku. Mám skúsenosti z vedenia tímu aj z vývoja moderných webových riešení.
+          či už ide o dizajn interiérov, programovanie alebo grafiku. Mám skúsenosti s vedením tímu aj s vývojom moderných webových riešení.
         </p>
       </div>
 
