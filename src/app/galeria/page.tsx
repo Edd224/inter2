@@ -5,13 +5,46 @@ import Image from 'next/image';
 import Modal from '../../components/Modal';
 
 const images = [
+  '/gallery/45.jpg',
+  '/gallery/50.jpg',
+  '/gallery/49.jpg',
+  '/gallery/42.jpg',
+  '/gallery/40.jpg',
+  '/gallery/60.jpg',
+  '/gallery/59.jpg',
+  '/gallery/58.jpg',
+  '/gallery/57.jpg',
+  '/gallery/56.jpg',
+  '/gallery/55.jpg',
+  '/gallery/54.jpg',
+  '/gallery/53.jpg',
+  '/gallery/52.jpg',
+  '/gallery/51.jpg',
+  '/gallery/48.jpg',
+  '/gallery/47.jpg',
+  '/gallery/46.jpg',
+  '/gallery/44.jpg',
+  '/gallery/43.jpg',
+  '/gallery/42.jpg',
+  '/gallery/41.jpg',
+  '/gallery/62.jpg',
+  '/gallery/39.jpg',
+  '/gallery/38.jpg',
+  '/gallery/37.jpg',
+  '/gallery/36.jpg',
+  '/gallery/35.jpg',
+  '/gallery/34.jpg',
+  '/gallery/33.jpg',
+  '/gallery/32.jpg',
+  '/gallery/31.jpg',
+  '/gallery/30.jpg',
   '/gallery/Image7.jpg',
   '/gallery/Image1.jpg',
   '/gallery/5.jpg',
   '/gallery/2.jpg',
   '/gallery/7.jpg',
-  '/gallery/3.jpg',
-  '/gallery/4.jpg',
+  // '/gallery/3.jpg',
+  // '/gallery/4.jpg',
   '/gallery/6.jpg',
   '/gallery/23.jpg',
   '/gallery/1.jpg',
@@ -60,7 +93,7 @@ export default function GaleriaPage() {
               width={400}
               height={300}
               quality={85}
-              className="w-full h-auto object-cover transition-transform duration-200 group-hover:scale-105"
+              className="w-full h-auto object-cover transition-transform duration-400 group-hover:scale-110"
             />
 
             {/* Dve logá zobrazované pri hover */}
