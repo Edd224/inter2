@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* HERO sekcia – s textom v spodnej časti obrázka */}
       <section
         className="relative w-full min-h-screen bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/hero.jpg')" }}
+        style={{ backgroundImage: "url('/72.jpg')" }}
       >
 
         {/* Overlay pre stmavenie pozadia */}
