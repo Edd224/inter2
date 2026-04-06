@@ -88,7 +88,6 @@ const images = [
   '/gallery/20.jpg',
   '/gallery/21.jpg',
   '/gallery/22.jpg',
-  '/gallery/24.jpg',
 ];
 
 export default function GaleriaPage() {
