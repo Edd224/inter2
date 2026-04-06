@@ -5,6 +5,22 @@ import Image from 'next/image';
 import Modal from '../../components/Modal';
 
 const images = [
+    '/gallery/x18.jpg',
+    '/gallery/x17.jpg',
+    '/gallery/x16.jpg',
+    '/gallery/x15.jpg',
+    '/gallery/x12.jpg',
+    '/gallery/x11.jpg',
+  '/gallery/x10.jpg',
+  '/gallery/x9.jpg',
+  '/gallery/x8.jpg',
+  '/gallery/x7.jpg',
+  '/gallery/x6.jpg',
+  '/gallery/x5.jpg',
+  '/gallery/x4.jpg',
+  '/gallery/x3.jpg',
+  '/gallery/x2.jpg',
+  '/gallery/x1.jpg',
   '/gallery/72.jpg',
   '/gallery/711.jpg',
   '/gallery/73.jpg',
